@@ -12,7 +12,7 @@ public class Controller : MonoBehaviour {
 	ControllerState state = ControllerState.Rest;
 	ControllerState lastState = 0;
 
-	public float walkingSpeed = 15.0f;
+	public float walkingSpeed = 25.0f;
 
 	void Start () {
 		//
