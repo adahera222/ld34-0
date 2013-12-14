@@ -15,11 +15,11 @@ public class Controller : MonoBehaviour {
 	public float walkingSpeed = 15.0f;
 
 	void Start () {
-	
+		//
 	}
 	
 	void Update () {
-	
+		//
 	}
 
 	void FixedUpdate() {
