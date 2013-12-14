@@ -12,7 +12,7 @@ public class Controller : MonoBehaviour {
 	ControllerState state = ControllerState.Rest;
 	ControllerState lastState = 0;
 
-	public float walkingSpeed = 25.0f;
+	public float walkingSpeed = 45.0f;
 
 	void Start () {
 		//
@@ -25,24 +25,24 @@ public class Controller : MonoBehaviour {
 	void FixedUpdate() {
         int horizontal = (int) Input.GetAxis("Horizontal");
 
-        // lastState = 0;
+        lastState = 0;
 
-        // switch (horizontal) {
-        // 	case 1:
-        // 		state = ControllerState.Right;
-        // 		Debug.Log("right");
-        // 		break;
+        switch (horizontal) {
+        	case 1:
+        		state = ControllerState.Right;
+        		Debug.Log("right");
+        		break;
 
-        // 	case -1:
-        // 		state = ControllerState.Left;
-        // 		Debug.Log("left");
-        // 		break;
+        	case -1:
+        		state = ControllerState.Left;
+        		Debug.Log("left");
+        		break;
 
-        // 	default:
-        // 		break;
-        // }
+        	default:
+        		break;
+        }
 
-        // lastState = state;
+        lastState = state;
 
         Vector3 currentSpeed = this.rigidbody2D.velocity;
         this.rigidbody2D.velocity = new Vector3(horizontal * walkingSpeed, currentSpeed.y, 0);
