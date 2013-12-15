@@ -15,7 +15,7 @@ public class KeyTriger : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider) {
 		if (collider.gameObject.name == "Hero") {
-			audio.PlayOneShot(keySound);
+			// audio.PlayOneShot(keySound);
 			Destroy(this.gameObject);
 			GameObject.Find("Hero").GetComponent<HeroStates>().isKeyCollected = true;
 		}

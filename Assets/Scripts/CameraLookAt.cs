@@ -8,8 +8,14 @@ public class CameraLookAt : MonoBehaviour {
 	private float smooth = 5;
 	private Vector3 newTransformPosition;
 
+	public AudioClip clip;
+
 	void Start() {
 		newTransformPosition = transform.position;
+
+		audio.loop = true;
+		audio.clip = clip;
+		audio.Play();
 	}
 
     

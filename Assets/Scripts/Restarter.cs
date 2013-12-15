@@ -11,5 +11,8 @@ public class Restarter : MonoBehaviour {
 		if (Input.GetButton("r")) {
 			Application.LoadLevel(Application.loadedLevel);
 		}
+		if (Input.GetButton("m")) {
+			Application.LoadLevel("MainMenu");
+		}
 	}
 }
