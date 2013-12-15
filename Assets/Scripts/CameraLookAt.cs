@@ -14,7 +14,7 @@ public class CameraLookAt : MonoBehaviour {
 
     
     void Update () {
-        newTransformPosition.x = Mathf.Lerp(newTransformPosition.x, target.position.x - 2.1f, Time.deltaTime * smooth);
+        newTransformPosition.x = Mathf.Lerp(newTransformPosition.x, target.position.x, Time.deltaTime * smooth);	// - 2.1f
         newTransformPosition.y = Mathf.Lerp(newTransformPosition.y, target.position.y, Time.deltaTime * smooth);
     	transform.position = newTransformPosition;
     }
